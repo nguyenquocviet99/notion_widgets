@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Roboto', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 0px auto;
+			width: auto;
+		}
+
+		.navMenu a {
+			color: #fff;
+			text-decoration: none;
+			text-transform: capitalize;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #A3080C;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+		<a id="trang-chu" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i></a>
+		<a id="chi-nhanh" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-store"></i></a>
+		<a id="menu" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-plus"></i></a>
+		<a id="bai-viet" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-pen-to-square"></i></a>
+		<a id="nhuong-quyen" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-user"></i></a>
+
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'trang-chu')
+				window.open("https://mrsnhi.vn", '_parent').focus();
+                                                            else if (id == 'chi-nhanh')
+				window.open("https://mrsnhi.vn/chi-nhanh", '_parent').focus();
+                                                            else if (id == 'menu')
+				window.open("https://mrsnhi.vn/menu", '_parent').focus();
+                                                            else if (id == 'bai-viet')
+				window.open("https://mrsnhi.vn/bai-viet", '_parent').focus();
+                                                            else if (id == 'nhuong-quyen')
+				window.open("https://mrsnhi.vn/nhuong-quyen", '_parent').focus();
+                      
+
+		}
+	</script>
+
+
+</body>
+
+</html>
